@@ -1,6 +1,7 @@
 package com.example.activity1
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -14,8 +15,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.activity1.ui.theme.Activity1Theme
 
 class MainActivity : ComponentActivity() {
+    val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "Activity created")
         enableEdgeToEdge()
         setContent {
             Activity1Theme {
